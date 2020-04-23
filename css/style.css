@@ -20,16 +20,15 @@ body {
   margin: 0;
 }
 
-.shaking{
+.shaking {
   position: absolute;
   animation: carshaking 0.1s linear infinite alternate;
 }
-@keyframes carshaking
-{
-  from{
+@keyframes carshaking {
+  from {
     bottom: 0px;
   }
-  to{
+  to {
     bottom: 7px;
   }
 }
@@ -39,7 +38,7 @@ body {
   bottom: 50px;
   width: 430px;
   height: 300px;
-  animation: driving 8s linear infinite ;
+  animation: driving 6.5s linear infinite;
   transform: scale(0.5);
 }
 @keyframes driving {
@@ -47,7 +46,7 @@ body {
     left: -100px;
   }
   100% {
-    left:350%;
+    left: 350%;
   }
 }
 
@@ -200,12 +199,12 @@ body {
   bottom: -50px;
   width: 430px;
   height: 300px;
-  animation: driving2 8s infinite linear;
+  animation: driving2 6.5s infinite linear;
   transform: scale(0.5);
 }
 @keyframes driving2 {
   0% {
-    left:350%
+    left: 350%;
   }
   100% {
     left: -100px;
@@ -295,7 +294,6 @@ body {
   bottom: 0;
   animation: wheelsRotation2 1s infinite linear;
 }
-
 
 @keyframes wheelsRotation2 {
   100% {
@@ -644,4 +642,68 @@ body {
 }
 #smoke2 .s9 {
   animation: smokeR 7s 9s infinite;
+}
+
+.tree1-type1 {
+  background: url(../img/tree1.svg) no-repeat;
+  width: 150px;
+  height: 250px;
+  padding-right: 20px;
+  position: absolute;
+  left: 30px;
+}
+
+.tree2-type1 {
+  background: url(../img/tree1.svg) no-repeat;
+  width: 150px;
+  height: 250px;
+  position: absolute;
+  left: 200px;
+}
+
+.tree1-type2 {
+  background: url(../img/tree2.svg) no-repeat;
+  width: 600px;
+  height: 500px;
+  position: absolute;
+  right: 200px;
+  top: 0px;
+  z-index: 1000;
+}
+.tree1-type3 {
+  background: url(../img/tree3.svg) repeat;
+  width: 300px;
+  height: 90px;
+  position: absolute;
+  left: 400px;
+  top: 0;
+  z-index: -1;
+}
+.tree2-type3 {
+  background: url(../img/tree3.svg) repeat;
+  width: 300px;
+  height: 90px;
+  position: absolute;
+  left: 600px;
+  top: -5px;
+  z-index: -1;
+}
+
+.flowers {
+  height: 100px;
+  width: 250%;
+  position: absolute;
+  bottom: -50px;
+  background: url(../img/flowers.svg) repeat-x;
+  z-index: 1;
+}
+
+.grass {
+  height: 170px;
+  width: 250%;
+  left: -100px;
+  position: absolute;
+  bottom: 120px;
+  background: url(../img/grass.svg) repeat-x;
+  z-index: 1;
 }
