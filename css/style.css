@@ -19,79 +19,38 @@ body {
   padding: 0;
   margin: 0;
 }
-@keyframes driving {
-  0% {
-    left: -25%;
-  }
-  10% {
-    bottom: 0%;
-  }
-  20% {
-    transform: scale(0.5) rotateZ(-10deg);
-    bottom: 5%;
-  }
-  25% {
-    transform: scale(0.5) rotateZ(0deg);
-  }
-  40% {
-    transform: scale(0.5) rotateZ(15deg);
-  }
-  50% {
-    transform: scale(0.5) rotateZ(0deg);
-  }
-  100% {
-    left: 110%;
-    bottom: 10%;
-    transform: scale(0.5) rotateZ(0deg);
-  }
-}
 
-@keyframes driving2 {
-  0% {
-    right: -25%;
-  }
-  10% {
-    bottom: -8%;
-  }
-  20% {
-    transform: scale(0.5) rotateZ(15deg);
-  }
-  25% {
-    transform: scale(0.5) rotateZ(0deg);
-  }
-  40% {
-    transform: scale(0.5) rotateZ(-15deg);
-  }
-  50% {
-    transform: scale(0.5) rotateZ(0deg);
-  }
-  100% {
-    right: 110%;
-    bottom: -8%;
-    transform: scale(0.5) rotateZ(0deg);
-  }
+.shaking{
+  position: absolute;
+  animation: carshaking 0.1s linear infinite alternate;
 }
-
-@keyframes wheelsRotation1 {
-  100% {
-    transform: rotate(360deg);
+@keyframes carshaking
+{
+  from{
+    bottom: 0px;
   }
-}
-
-@keyframes wheelsRotation2 {
-  100% {
-    transform: rotate(-360deg);
+  to{
+    bottom: 7px;
   }
 }
 
 .car-container {
-  position: absolute;
-  bottom: -10%;
+  position: relative;
+  bottom: 50px;
   width: 430px;
   height: 300px;
-  animation: driving 7s infinite linear;
+  animation: driving 8s linear infinite ;
   transform: scale(0.5);
 }
+@keyframes driving {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left:350%;
+  }
+}
+
 .car-container:after {
   content: "";
   width: 426px;
@@ -174,6 +133,12 @@ body {
   bottom: 0;
   animation: wheelsRotation1 1s infinite linear;
 }
+
+@keyframes wheelsRotation1 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .car1-wheel1 {
   left: 5%;
 }
@@ -231,12 +196,20 @@ body {
 /*   CAR2 CONTAINER   */
 
 .car2-container {
-  position: absolute;
-  bottom: -10%;
+  position: relative;
+  bottom: -50px;
   width: 430px;
   height: 300px;
-  animation: driving2 7s infinite linear;
+  animation: driving2 8s infinite linear;
   transform: scale(0.5);
+}
+@keyframes driving2 {
+  0% {
+    left:350%
+  }
+  100% {
+    left: -100px;
+  }
 }
 .car2-container:after {
   content: "";
@@ -321,6 +294,13 @@ body {
   position: absolute;
   bottom: 0;
   animation: wheelsRotation2 1s infinite linear;
+}
+
+
+@keyframes wheelsRotation2 {
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 .car2-wheel1 {
   left: 5%;
